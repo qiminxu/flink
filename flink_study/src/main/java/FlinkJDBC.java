@@ -30,6 +30,7 @@ public class FlinkJDBC {
                  * timestamp:指定时间戳进行数据导入(大于等于指定时间错读取数据)
                  */
                 .startupOptions(StartupOptions.initial())
+
                 .deserializer(new CustomerDeserialization())
                 .build();
         // 3、使用CDC Source方式从mysql中读取数据
